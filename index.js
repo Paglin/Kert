@@ -16,11 +16,11 @@ function getCookie(cname) {
 }
 
 if (getCookie("DId") == null){
-    window.alert('Uh Oh');
+    var cvalue = window.prompt('You Seem To Not Have An Account\nPlease Enter A Username', 'Username');
     var cname = "DId"
     var exdays = 3650
     const d = new Date
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     let expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + ";" + expires + ";path=/";
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 };
